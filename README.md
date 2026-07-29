@@ -76,10 +76,5 @@ README.md
 - [`references/translation-quality.md`](references/translation-quality.md)：专业翻译、并行协作和最终审校规范。
 - [`references/repository-delivery.md`](references/repository-delivery.md)：仓库、构建和 Git-ready 交付标准。
 - [`assets/project-docs/`](assets/project-docs/)：七份中文过程文档模板。
-- [`scripts/scaffold_localization_repo.py`](scripts/scaffold_localization_repo.py)：安全创建标准目录和缺失模板，不覆盖现有文件。
 
-初始化过程文档：
-
-```bash
-python3 scripts/scaffold_localization_repo.py /path/to/project
-```
+执行时由 Agent 使用当前环境可用的文件操作工具创建标准目录，并将缺失模板复制到 `docs/`；已有目录和文件不会被覆盖。

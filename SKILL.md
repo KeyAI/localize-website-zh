@@ -23,7 +23,7 @@ description: End-to-end localization of complete websites into professional Simp
 1. 阅读 [capture-and-inventory.md](references/capture-and-inventory.md)，规划抓取与内容表面清单。
 2. 阅读 [translation-quality.md](references/translation-quality.md)，制定质量、术语和并行翻译规则。
 3. 阅读 [repository-delivery.md](references/repository-delivery.md)，确定仓库、构建与交付边界。
-4. 对新项目运行 `scripts/scaffold_localization_repo.py <project-root>`，生成标准目录和过程文档；已有项目则按需补齐，绝不覆盖现有文件。
+4. 对新项目使用当前环境可用的文件操作工具创建 `origin/`、`zh/`、`docs/` 和 `docs/progress/`，再将 `assets/project-docs/` 中缺失的模板复制到 `docs/`；已有目录和文件一律保留，不得覆盖。
 5. 建立四阶段工作计划。任何时刻只推进当前阶段，除非发现会使当前工作失效的阻塞问题。
 
 ## 第一阶段：完整抓取网站
@@ -160,5 +160,4 @@ README.md
 - [capture-and-inventory.md](references/capture-and-inventory.md)：抓取静态站、SPA、动态资源和运行时文案表面的详细方法。
 - [translation-quality.md](references/translation-quality.md)：专业翻译、术语、subagent 分工和最终审校方法。
 - [repository-delivery.md](references/repository-delivery.md)：`origin/`、`zh/`、过程文档、构建脚本和 Git 交付规范。
-- `assets/project-docs/`：过程文档模板，由脚手架脚本复制到目标仓库。
-- `scripts/scaffold_localization_repo.py`：安全创建标准目录和缺失模板，不覆盖已有内容。
+- `assets/project-docs/`：过程文档模板。使用当前环境可用的文件操作工具将缺失模板复制到目标仓库，不覆盖已有内容。
