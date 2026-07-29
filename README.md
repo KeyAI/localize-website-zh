@@ -69,6 +69,11 @@ README.md
 - 原站：[Immersive Linear Algebra](https://immersivemath.com/ila/index.html)
 - 在线阅读：[stellar-aurora-add9.here.now](https://stellar-aurora-add9.here.now/ila/index.html)
 
+### 《微积分其实很容易》简体中文版
+
+- 原站：[Calculus Made Easy](https://calculusmadeeasy.org/)
+- 在线阅读：[keen-ginger-62hw.here.now](https://keen-ginger-62hw.here.now/)
+
 ## skill 内容
 
 - [`SKILL.md`](SKILL.md)：核心四阶段流程与交付约束。
