@@ -1,0 +1,4 @@
+interface:
+  display_name: "完整网站中文化"
+  short_description: "完整抓取、专业翻译、并行协作、全局审校与Git仓库交付"
+  default_prompt: "使用 $localize-website-zh 完整抓取并专业中文化这个网站，最终交付可提交的 Git 仓库。"
