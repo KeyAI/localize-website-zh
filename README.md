@@ -1,14 +1,10 @@
 # localize-website-zh
 
-[![skills.sh](https://skills.sh/b/KeyAI/localize-website-zh)](https://skills.sh/KeyAI/localize-website-zh)
-
-一个面向 Codex 及其他兼容 Agent Skills 的完整网站简体中文化技能。
+一个适用于兼容 Agent Skills 的完整网站简体中文化 skill。
 
 它把网站中文化作为端到端内容工程处理：完整抓取原站、制定翻译策略与术语规范、多 subagent 并行初译、统一双语审校与运行时验证，最终交付可提交的 Git 仓库。目标译文质量不低于高级专业人工翻译。
 
 ## 安装
-
-按照 [skills.sh 官方文档](https://www.skills.sh/docs)，使用 Skills CLI 安装：
 
 ```bash
 npx skills add KeyAI/localize-website-zh
@@ -23,7 +19,7 @@ npx skills add KeyAI/localize-website-zh
 最终交付包含 origin/、zh/ 和过程文档的 Git 仓库。
 ```
 
-可以提供远程网站 URL，也可以提供现成的本地源码。对于完整网站，技能会优先保留原站结构、行为、资源、公式、图示和动态用户界面，而不是只翻译首页或静态正文。
+可以提供远程网站 URL，也可以提供现成的本地源码。对于完整网站，skill 会优先保留原站结构、行为、资源、公式、图示和动态用户界面，而不是只翻译首页或静态正文。
 
 ## 工作流程
 
@@ -71,22 +67,9 @@ README.md
 ### 《沉浸式线性代数》简体中文版
 
 - 原站：[Immersive Linear Algebra](https://immersivemath.com/ila/index.html)
-- 成果仓库：[KeyAI/immersivemath_zh](https://github.com/KeyAI/immersivemath_zh)
 - 在线阅读：[stellar-aurora-add9.here.now](https://stellar-aurora-add9.here.now/ila/index.html)
 
-该项目完整中文化了线性代数教材网站的正文、数学术语、公式周边说明、图注、菜单、弹窗、JavaScript 动态文案和辅助文本，同时保留交互式 Canvas 图解与原有章节结构。
-
-项目实践验证了以下方法：
-
-- 在翻译前保存完整英文基准和运行时资源。
-- 先建立统一数学术语表，再按章节并行翻译。
-- 将 HTML、JavaScript、ARIA、SVG/Canvas 标签和第三方可见界面纳入同一内容清单。
-- 初译完成后，以数学专业视角统一润色并检查动态文案绑定。
-- 将大型通用依赖与网站真正使用的运行时文件区分，生成更适合静态部署的产物。
-
-这个案例完成于本技能目录规范定稿之前，因此仍使用 `source/`、`site/` 和 `publish/`；新项目应采用本技能统一的 `origin/` 与 `zh/` 结构。
-
-## 技能内容
+## skill 内容
 
 - [`SKILL.md`](SKILL.md)：核心四阶段流程与交付约束。
 - [`references/capture-and-inventory.md`](references/capture-and-inventory.md)：网站抓取与内容表面清单。
@@ -100,12 +83,3 @@ README.md
 ```bash
 python3 scripts/scaffold_localization_repo.py /path/to/project
 ```
-
-## 核心原则
-
-- 原文基准不可修改，中文改动只进入 `zh/`。
-- 翻译阶段与统一审校阶段分离。
-- 不把盲目逐字符串机器翻译当作最终译文。
-- 以段落、领域和交互语境为单位翻译。
-- 过程文档随任务持续更新，最终 QA 必须记录真实覆盖范围。
-- 不破坏代码、公式、占位符、数据键、DOM 标识、资源路径和可访问性。
